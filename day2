@@ -1,0 +1,55 @@
+#day2 
+#dsa1
+#!/bin/python
+
+import math
+import os
+import random
+import re
+import sys
+
+#
+# Complete the 'bonAppetit' function below.
+#
+# The function accepts following parameters:
+#  1. INTEGER_ARRAY bill
+#  2. INTEGER k
+#  3. INTEGER b
+#
+
+def bonAppetit(bill, k, b):
+    # Write your code here
+    
+    bil = 0
+    bia=0
+    
+    bill.pop(k)
+    #print(bill) 
+    for i in range(len(bill)):
+        bil=bil+bill[i]
+    
+        
+    bil=bil//2
+    #print(bil)
+    if bil == b :
+        print("Bon Appetit")
+         
+        return    
+    else:
+        print(b-bil)
+        return 
+   
+    
+
+if __name__ == '__main__':
+    first_multiple_input = raw_input().rstrip().split()
+
+    n = int(first_multiple_input[0])
+
+    k = int(first_multiple_input[1])
+
+    bill = map(int, raw_input().rstrip().split())
+
+    b = int(raw_input().strip())
+
+    bonAppetit(bill, k, b)
